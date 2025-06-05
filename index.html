@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Hamburgueria</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img id="logo" src="./assets/refactor logo.svg" alt="Logo HFM"></div>
+        <ul class="nav">
+            <li class="nav-item">Home</li>
+            <li class="nav-item">Cardápio</li>
+            <li class="nav-item">Peça Agora</li>
+            <li class="nav-item">Encontre uma Loja</li>
+            <li class="nav-item">Fale Conosco</li>
+        </ul>
+        <button class="login"><span class="icon-user"><img src="./assets/Vector.svg" alt=""></span>Login</button>
+    </nav>
+    <main>
+        <div class="banner-container">
+            <div class="left-container">
+                <div class="text-container"> 
+                    <span class="left-title">Garanta uma experiência incrível e inesquecível</span>
+                    <span class="left-text">Visite um dos nossos restaurantes e garanta uma experiência incrível e inesquecível, o cliente aqui é   sempre bem vindo!</span>
+                </div>
+                <button class="left-btn">
+                    <div class="btn-container">
+                        <span class="btn-icon">
+                            <img src="./assets/Down-arrow.svg" alt="seta para baixo">
+                        Conheça o menu
+                        </span>
+                    </div>
+                </button>
+            </div>
+            <div class="image-container">
+                <img src="./assets/Hamburguer.png" alt="Hamburguer">
+            </div>
+        </div>
+    </main>
+
+    <div class="mobile-navbar">
+        <div class="menu-hamburguer">
+            <checkbox class="menu"><label for="menu"><img src="./assets/Menu.svg" alt=""></label></button>
+        </div>
+        <div class="sidebar">
+            <div class="close-icon-container">
+                <label for="menu">
+                    <img class="close-icon" src="./assets/Close-icon.svg" alt="">
+                </label>
+            </div>
+            <div class="divisor-container">
+                <span><img class="divisor" src="./assets/divisor.svg" alt=""></span>
+            </div>
+            <div class="nav-lilst-container">
+                <ul>
+                    <li class="nav-item">Home</li>
+                    <li class="nav-item">Cardápio</li>
+                    <li class="nav-item">Peça Agora</li>
+                    <li class="nav-item">Encontre uma Loja</li>
+                    <li class="nav-item">Fale Conosco</li>
+                </ul>
+            </div>
+            <div class="login-container">
+                <button class="login-sidebar">
+                    <span class="icon-user"><img src="./assets/Vector.svg" alt=""></span>
+                    Login
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
