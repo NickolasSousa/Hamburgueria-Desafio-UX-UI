@@ -40,7 +40,7 @@ body.no-scroll, html.no-scroll {
     gap: 0.625em;
     justify-content: center;
     align-items: center;
-    background-color: none;
+    background-color: transparent;
     border: 2px solid var(--laranja);
     color: var(--laranja);
     font-family: var(--fonte);
