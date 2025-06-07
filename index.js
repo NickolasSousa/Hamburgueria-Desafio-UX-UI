@@ -4,7 +4,7 @@ let tamanhoTela = window.innerWidth;
 //trocar logo
 function trocarLogo(){
     const logo = document.querySelector('#logo');
-    if (tamanhoTela < 768){
+    if (tamanhoTela <= 768){
         logo.src = './assets/Logo-Mobile.svg';
     } else{
         logo.src = './assets/refactor logo.svg';
