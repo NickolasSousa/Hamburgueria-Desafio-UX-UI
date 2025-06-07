@@ -152,7 +152,8 @@ body.no-scroll, html.no-scroll {
     }
 
     .left-container{
-        padding-left: 2em;
+        width: 70%;
+        padding: 0 0.5em 0 2em;
         gap: 4em;
 
     }
@@ -167,8 +168,18 @@ body.no-scroll, html.no-scroll {
         width: 1.25em;
         height: 1.25em;
     }
+
+    .image-container{
+        height: 100%;
+    }
+
+    .image-container img{
+        max-width: 100%;
+        width: auto;
+    }
 }
         
+
 /* Responsive mobile */
     
 @media (max-width: 768px){
