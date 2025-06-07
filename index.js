@@ -26,3 +26,26 @@ window.addEventListener('load', trocarLogo);
 //     }else{
 // }
 // }
+
+function atualizarEstadoMenu() {
+    const menu = document.querySelector('.menu');
+    const menuIcon = document.querySelector('.menu-hamburger');
+    const sidebar = document.querySelector('.sidebar');
+    
+    sidebar.classList.toggle('ativa', menu.checked);
+    document.body.classList.toggle('no-scroll', menu.checked);
+    document.documentElement.classList.toggle('no-scroll', menu.checked);
+    menuIcon.style.display = 'none'
+}
+
+function menuHamburguer() {
+    const menu = document.querySelector('.menu');
+    menu.addEventListener('change', atualizarEstadoMenu);
+
+    atualizarEstadoMenu();
+}
+
+document.addEventListener('DOMContentLoaded', menuHamburguer);
+
+
+
