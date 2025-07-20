@@ -178,11 +178,10 @@ body.no-scroll, html.no-scroll {
         width: auto;
     }
 }
-        
 
-/* Responsive mobile */
-    
-@media (max-width: 768px){
+ /* Responsive mobile */
+        
+ @media (max-width: 768px){
     body{
         background-color: var(--banner-background);
         color: var(--cor-texto);
@@ -256,13 +255,7 @@ body.no-scroll, html.no-scroll {
         position: relative;
     }   
 
-    .menu-hamburguer{
-        position: absolute;
-        top: 0;
-        right: 1em;
-        cursor: pointer;
-        z-index: 999;
-    }
+
 
 
     .sidebar {
@@ -329,6 +322,5 @@ body.no-scroll, html.no-scroll {
     }
 
 }
-    
-    
+
 

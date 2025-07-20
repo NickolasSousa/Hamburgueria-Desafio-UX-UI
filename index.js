@@ -1,5 +1,8 @@
-
+const sidebarContainer = document.querySelector('.sidebar')
+const navbar = document.querySelector('.navbar')
 let tamanhoTela = window.innerWidth;
+
+let menuHamburguer;
 
 //trocar logo
 function trocarLogo(){
@@ -12,40 +15,51 @@ function trocarLogo(){
     
 }
 
+window.addEventListener('resize', () => {
+    tamanhoTela = window.innerWidth;
+    trocarLogo();
+    
+    if (tamanhoTela <= 768 && !menuHamburguer) {
+        criarMenuHamburguer();
+        const menuCheckbox = menuHamburguer.querySelector('.menu');
+        menuCheckbox.addEventListener('change', atualizarEstadoMenu);
+    }
+});
+
+
+
+
 window.addEventListener('resize', trocarLogo);
 window.addEventListener('load', trocarLogo);
 
 
-//estilo do menu
+function criarMenuHamburguer() {
+    menuHamburguer = document.createElement('div')
+    menuHamburguer.classList.add('menu-hamburguer')
+    menuHamburguer.innerHTML = `
+    <input type="checkbox" class="menu" hidden id="menu">
+    <label for="menu"><img src="./assets/Menu.svg" alt=""></label>
+    `
 
-// function posicaoItemsNav(){
-//     const navItems = document.querySelector('.nav');
-//     if (tamanhoTela < 768){
-//         navItems.style.position = 'relative';
-//         navItems.style.left = '10px';
-//     }else{
-// }
-// }
+    navbar.append(menuHamburguer)
+}
+
+
+if(tamanhoTela<=768) {
+    criarMenuHamburguer()
+
+}
+
+const menuCheckbox = menuHamburguer.querySelector('.menu')
 
 function atualizarEstadoMenu() {
-    const menu = document.querySelector('.menu');
-    const menuIcon = document.querySelector('.menu-hamburger');
-    const sidebar = document.querySelector('.sidebar');
-    
-    sidebar.classList.toggle('ativa', menu.checked);
-    document.body.classList.toggle('no-scroll', menu.checked);
-    document.documentElement.classList.toggle('no-scroll', menu.checked);
-    menuIcon.style.display = 'none'
+
+    sidebarContainer.classList.toggle('ativa', menuCheckbox.checked)
+    document.body.classList.toggle('no-scroll', menuCheckbox.checked)
+    document.documentElement.classList.toggle('no-scroll', menuCheckbox.checked);
+    // menuHamburguer.style.display = 'none'
+
 }
 
-function menuHamburguer() {
-    const menu = document.querySelector('.menu');
-    menu.addEventListener('change', atualizarEstadoMenu);
 
-    atualizarEstadoMenu();
-}
-
-document.addEventListener('DOMContentLoaded', menuHamburguer);
-
-
-
+menuCheckbox.addEventListener('change', atualizarEstadoMenu,)
